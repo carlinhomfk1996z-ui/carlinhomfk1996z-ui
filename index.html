@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login iPhone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Tela de Login -->
+    <div id="loginBox">
+      <h2>🔐 Login</h2>
+      <input type="text" id="loginUser" placeholder="Usuário">
+      <input type="password" id="loginPass" placeholder="Senha">
+      <button onclick="login()">Entrar</button>
+      <p>Não tem conta? <span onclick="mostrarCadastro()">Criar conta</span></p>
+    </div>
+
+    <!-- Tela de Cadastro -->
+    <div id="registerBox" style="display:none;">
+      <h2>📝 Cadastro</h2>
+      <input type="text" id="registerUser" placeholder="Novo usuário">
+      <input type="password" id="registerPass" placeholder="Nova senha">
+      <button onclick="register()">Cadastrar</button>
+      <p>Já tem conta? <span onclick="mostrarLogin()">Voltar ao login</span></p>
+    </div>
+
+    <!-- Tela Logado -->
+    <div id="homeBox" style="display:none;">
+      <h2>🎉 Bem-vindo!</h2>
+      <p id="userLogado"></p>
+      <button onclick="logout()">Sair</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
